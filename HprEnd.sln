@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HprEnd", "HprEnd.csproj", "{198C040C-5625-4276-A528-75F35DB0026C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{198C040C-5625-4276-A528-75F35DB0026C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{198C040C-5625-4276-A528-75F35DB0026C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{198C040C-5625-4276-A528-75F35DB0026C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{198C040C-5625-4276-A528-75F35DB0026C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DD3534F-0B1F-448C-91A0-7E21C3E7CC0F}
+	EndGlobalSection
+EndGlobal

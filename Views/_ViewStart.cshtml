@@ -1,0 +1,25 @@
+﻿@{
+    var userRoleCookie = ViewContext.HttpContext.Request.Cookies["UserRole"];
+    if (!string.IsNullOrEmpty(userRoleCookie))
+    {
+        int role;
+        if (int.TryParse(userRoleCookie, out role))
+        {
+            if (role == 1)
+            {
+                Layout = "~/Views/Shared/Pracownik.cshtml";
+            }
+            else if (role == 2)
+            {
+                Layout = "~/Views/Shared/Admin.cshtml";
+            }
+            else if (role == 3)
+            {
+                Layout = "~/Views/Shared/Uzytkownik.cshtml";
+            }
+            return;
+        }
+    }
+
+    Layout = "_Layout";
+}

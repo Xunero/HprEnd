@@ -1,0 +1,75 @@
+﻿@model IEnumerable<HprEnd.Models.Opinie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista Opini</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Uzytkownik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Film)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Opis)
+            </th>
+            <th>
+                <p>@{
+                        var userRoleCookie = Context.Request.Cookies["UserRole"];
+                        var userID = Context.Request.Cookies["ID"];
+                        @if (!string.IsNullOrEmpty(userRoleCookie))
+                        {
+                            int role;
+                            if (int.TryParse(userRoleCookie, out role))
+                            {
+                                if (role == 1 || role == 2 || role == 3)
+                                {
+                                    <a asp-action="Create">Dodaj Opinie</a>
+                                }
+                            }
+
+                        }
+                    }
+                </p>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Uzytkownik.Login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Film.Opis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Opis)
+                </td>
+                <td>
+                    @{
+
+                        @if (!string.IsNullOrEmpty(userRoleCookie))
+                        {
+                            int role;
+                            if (int.TryParse(userRoleCookie, out role))
+                            {
+                                if (role == 1 || role == 2 || userID == item.Uzytkownik.ID_Uzytkownik.ToString())
+                                {
+                                    <a asp-action="Delete" asp-route-id="@item.ID_Opinie">Delete</a>
+                                }
+                            }
+                        }
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,64 @@
+/* Resetowanie stylów */
+*[b-qmvu6wv7z1] {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylowanie linków */
+a[b-qmvu6wv7z1] {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    a:hover[b-qmvu6wv7z1] {
+        color: #0056b3;
+    }
+
+/* Stylowanie przycisków */
+.btn-primary[b-qmvu6wv7z1] {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover[b-qmvu6wv7z1] {
+        background-color: #0056b3;
+    }
+
+/* Stylowanie nawigacji */
+.navbar-brand[b-qmvu6wv7z1] {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav[b-qmvu6wv7z1] {
+    text-align: center;
+}
+
+.nav-link[b-qmvu6wv7z1] {
+    color: #0077cc;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+    .nav-link:hover[b-qmvu6wv7z1] {
+        color: #0056b3;
+    }
+
+/* Stylowanie stopki */
+.footer[b-qmvu6wv7z1] {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}

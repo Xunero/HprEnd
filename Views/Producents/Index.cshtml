@@ -1,0 +1,49 @@
+﻿@model IEnumerable<HprEnd.Models.Producent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>lista Producentow</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwa)
+            </th>
+            <th>
+                <a asp-action="Create">Dodaj Nowa</a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazwa)
+            </td>
+                <td>
+                <a asp-action="Details" asp-route-id="@item.ID_Producent">Details</a> |
+                    @{
+                        var userRoleCookie = Context.Request.Cookies["UserRole"];
+                        @if (!string.IsNullOrEmpty(userRoleCookie))
+                        {
+                            int role;
+                            if (int.TryParse(userRoleCookie, out role))
+                            {
+                                if (role == 1 || role == 2)
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.ID_Producent">Edit</a>
+                                    <a asp-action="Delete" asp-route-id="@item.ID_Producent">Delete</a>
+                                }
+
+                            }
+                        }
+                    }
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
